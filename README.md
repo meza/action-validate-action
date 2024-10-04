@@ -1,6 +1,6 @@
 # Action Validate Action
 
-Validates the action.yml file
+Validates the workflow and action definition files
 
 ## Usage
 
