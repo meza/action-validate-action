@@ -4,7 +4,8 @@ on:
   pull_request:
 
 jobs:
-  Release:
+  verify:
+    name: Verify PR
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
