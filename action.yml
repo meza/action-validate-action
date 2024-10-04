@@ -1,24 +1,12 @@
-name: "A very cool action"
-description: "Does the very cool thing in a cool way"
-
-inputs:
-  node-version:
-    description: "What version to install?"
-    type: string
-    required: false
-    default: latest
-
-outputs:
-  npm-version:
-    description: "The version of NPM installed"
-    value: ${{ steps.something.outputs.npm-version }}
+name: "Validates the github yml files"
 
 runs:
   using: "composite"
   steps:
-    - name: Use Node.js ${{ inputs.node-version }}
-      uses: actions/setup-node@v4.0.4
-      id: something
-      with:
-        node-version: ${{ inputs.node-version }}
-        cache: 'pnpm'
+    - name: Install action-validator with asdf
+      uses: meza/action-install-action-validator@v1.0.0
+    - name: Lint Actions
+      run: |
+        find .github/workflows -type f \( -iname \*.yaml -o -iname \*.yml \) \
+          | xargs -I {} action-validator --verbose {} && \
+        action-validator --verbose action.yml
