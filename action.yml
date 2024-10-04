@@ -1,4 +1,5 @@
 name: "Validates the github yml files"
+description: "Runs the action-validator on the relevant yml files"
 
 runs:
   using: "composite"
