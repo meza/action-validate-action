@@ -6,6 +6,7 @@ runs:
     - name: Install action-validator with asdf
       uses: meza/action-install-action-validator@v1.0.0
     - name: Lint Actions
+      shell: bash
       run: |
         find .github/workflows -type f \( -iname \*.yaml -o -iname \*.yml \) \
           | xargs -I {} action-validator --verbose {} && \
