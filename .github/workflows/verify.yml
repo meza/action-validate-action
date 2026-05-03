@@ -11,7 +11,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
       - name: Install action-validator with asdf
-        uses: meza/action-install-action-validator@v1.0.4
+        uses: meza/action-install-action-validator@v1.0.5
       - name: Lint Actions
         run: |
           find .github/workflows -type f \( -iname \*.yaml -o -iname \*.yml \) \
