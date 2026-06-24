@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Install action-validator with asdf
         uses: meza/action-install-action-validator@v1.0.5
       - name: Lint Actions
