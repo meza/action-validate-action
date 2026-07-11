@@ -5,7 +5,7 @@ runs:
   using: "composite"
   steps:
     - name: Install action-validator with asdf
-      uses: meza/action-install-action-validator@v1.0.5
+      uses: meza/action-install-action-validator@a5f0179e8a7e7cb831696eff7ea2df2ee6e97f6d # v1.0.5
     - name: Lint Actions
       shell: bash
       run: |

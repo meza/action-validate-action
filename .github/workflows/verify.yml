@@ -9,9 +9,9 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Checkout
-        uses: actions/checkout@v6.0.3
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
       - name: Install action-validator with asdf
-        uses: meza/action-install-action-validator@v1.0.5
+        uses: meza/action-install-action-validator@a5f0179e8a7e7cb831696eff7ea2df2ee6e97f6d # v1.0.5
       - name: Lint Actions
         run: |
           find .github/workflows -type f \( -iname \*.yaml -o -iname \*.yml \) \
